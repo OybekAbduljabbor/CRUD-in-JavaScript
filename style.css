@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: #171717;
+  letter-spacing: 1px;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 4%;
+  overflow: hidden;
+  background: #f8f8f8;
+}
+
+#form-add {
+  width: 320px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#form-add > p {
+  font-size: 140%;
+}
+
+#form-add > input {
+  width: 100%;
+  height: auto;
+  outline: none;
+  padding-left: 10px;
+  font-size: 120%;
+  border: none;
+  border-bottom: 1px solid #171717;
+  padding: 25px 10px 5px 10px;
+  background: none;
+}
+#form-add > label {
+  width: 100%;
+  height: auto;
+  outline: none;
+  padding-left: 10px;
+  font-size: 120%;
+  border: none;
+  border-bottom: 1px solid #171717;
+  padding: 25px 10px 5px 10px;
+}
+
+#form-add > label > input {
+  display: none;
+}
+
+#form-add > label > span {
+  color: #757575;
+}
+
+#form-add > :last-child {
+  background: #5a29e4;
+  color: #ffff;
+  height: 50px;
+  padding: 0 !important;
+  cursor: pointer;
+  border: none !important;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+
+#card-students {
+  width: 50%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* ========== student ========== */
+
+#student {
+  width: 460px;
+  min-height: 150px;
+  max-height: 150px;
+  background-color: #5a29e4;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+#student > figure {
+  min-width: 130px;
+  max-width: 130px;
+  min-height: 150px;
+  max-height: 150px;
+  background-color: #c5f503;
+}
+
+#student > figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#student-info {
+  width: 100%;
+  min-height: 150px;
+  max-height: 150px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#student-about > :nth-child(1) > span {
+  font-size: 120%;
+  color: #ffff;
+}
+#student-about > h4 {
+  font-size: 110%;
+  color: #ffff;
+  padding-top: 5px;
+}
+
+#student-edit > button {
+  width: 120px;
+  height: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+#student-edit > :first-child {
+  background-color: rgb(241, 76, 76);
+  color: #ffff;
+  border-radius: 4px;
+}
+
+#student-edit > :first-child:active {
+  background-color: rgb(213, 81, 81);
+}
+
+#student-edit > :last-child {
+  background-color: rgb(0, 255, 0);
+  border-radius: 4px;
+}
+
+#student-edit > :last-child:active {
+  background-color: rgb(0, 217, 0);
+}
+
+/* =========== alert-message ============= */
+
+#alert-message {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 320px;
+  height: 50px;
+  background-color: #5a29e4;
+  margin: 0 0 20px 50px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffff;
+  transform: translateX(-150%);
+  transition: all 0.3s ease-in-out;
+}
+
+#alert-message > span {
+  color: #ffff;
+  font-size: 120%;
+}
+
+.show-alert {
+  transform: translateX(0) !important;
+}
+
+/* ============ loading =========== */
+
+#loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #17171789;
+  z-index: -99;
+  opacity: 0;
+  transition: all 0.1s ease-in-out;
+}
+
+#loading > img {
+  width: 70px;
+  height: 70px;
+}
+
+.show-loading {
+  z-index: 99 !important;
+  opacity: 1 !important;
+}

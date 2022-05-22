@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UITC-STUDENTS</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <form id="form-add">
+        <p>UITC STUDENTS</p>
+        <input
+          type="text"
+          placeholder="Familya"
+          id="surname"
+          autocomplete="off"
+        />
+        <input type="text" placeholder="Ism" id="name" autocomplete="off" />
+        <input type="text" placeholder="Tel" id="tel" autocomplete="off" />
+        <input type="text" placeholder="Grup" id="grup" autocomplete="off" />
+        <label>
+          <input type="file" id="img" />
+          <span>Foto</span>
+        </label>
+        <input type="submit" value="Add Student" id="submit-btn" />
+      </form>
+
+      <div id="alert-message">
+        <span id="message-is-server"></span>
+      </div>
+    </div>
+    <div id="card-students"></div>
+    <div id="loading">
+      <img src="./loading.gif" alt="" />
+    </div>
+  </body>
+  <script src="./Server.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+</html>
